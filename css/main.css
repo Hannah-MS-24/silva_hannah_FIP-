@@ -1189,23 +1189,24 @@ p {
   border-radius: 5px;
   cursor: pointer;
   overflow: hidden;
+  z-index: 2; /* Ensure the content stays on top */
 }
 
 .button::after {
-  content: "";
+  content: ""; /* Ensures the pseudo-element renders */
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: #7e1a14;
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-out;
-  z-index: 1;
+  background: rgba(0, 0, 0, 0.3); /* Darken overlay effect */
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  z-index: 1; /* Ensure it appears below the content */
 }
+
 .button:hover::after {
-  background-color: #7e1a14;
-  transform: translateX(0);
+  opacity: 1; /* Darken the button on hover */
 }
 
 @keyframes slideIn {
