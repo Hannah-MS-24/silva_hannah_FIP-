@@ -25,6 +25,7 @@ Includes a hamburger menu that navigates to the All Inclusive Packages page.
 2. All Inclusive Packages Page (all-packages.html):
    Central hub for navigating to detailed pages like Brides and Eco-Friendly.
 
+
 Styled with CSS Grid and semantic HTML.
 
 3. Brides Page (brides.html):
